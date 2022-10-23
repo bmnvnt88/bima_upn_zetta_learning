@@ -1,60 +1,134 @@
-* {
-  font-family: "Josefin Sans", sans-serif;
-  margin: 0;
-  padding: 0;
+center {
+  padding-left: 50px;
+  padding-right: 50px;
 }
-header > h1 {
-  color: #a1c298;
-  padding: 10px;
+
+.card-r1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  /* width: 230px;
+  height: 600px; */
+  border-radius: 1em;
+  display: block;
+  margin: 0px 5px 5px 5px;
+  float: left;
+}
+
+.card-r1:hover {
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.card-r2 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  /* width: 230px;
+  height: 600px; */
+  border-radius: 1em;
+  display: block;
+  margin: 5px 5px 5px 5px;
+  float: left;
+}
+
+.card-r2:hover {
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.card-r3 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  /* width: 230px;
+  height: 600px; */
+  border-radius: 1em;
+  display: block;
+  margin: 5px 5px 0px 5px;
+  float: left;
+}
+
+.card-r3:hover {
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.parentCard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: auto;
+  height: auto;
+  border-radius: 1em;
+  margin: 5px;
+}
+/* On mouse-over, add a deeper shadow */
+/* .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+} */
+
+p {
   text-align: center;
 }
-header {
-  width: 100%;
-  z-index: 1000;
-  position: fixed;
-  background: black;
-}
+
+/* Add some padding inside the card container */
 .container {
+  padding: 2px 16px;
+}
+
+.nnt {
+  padding: 1em 1em 1em 1em;
+  width: 400px;
+  height: 400px;
+  border-radius: 25px 25px 25px 25px;
+  display: block;
+}
+
+.desc {
+  color: darkgreen;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 25px;
+  color: darkgreen;
+}
+
+.judul {
+  padding: 2rem;
+  background-color: blanchedalmond;
+  border-radius: 15px;
+}
+
+.card .container h4 b {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h4 {
+  text-align: center;
+}
+
+.kartu {
   display: flex;
-  justify-content: center;
-  flex-direction: row;
+  /* padding-left: 80px; */
   flex-wrap: wrap;
-  padding-top: 64px;
-  width: 100%;
+  justify-content: center;
 }
-.card > h4 {
-  text-align: center;
-  margin: 12px;
-  color: #dd5353;
+
+h4 + p {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
-.card {
-  border: 5px solid black;
-  margin: 0.6rem;
-  padding: 1vw;
-  background-color: #fbf2cf;
-  width: 300px;
-  border-radius: 35px;
-}
-.card > img {
-  width: 300px;
-  height: 200px;
-  border-radius: 35px;
-}
-a:hover {
-  color: red;
-  background-color: white;
-}
+
 footer {
-  background-color: black;
-  padding: 12px;
+  display: table;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
-footer > a {
-  color: #a1c298;
-  padding: 10px;
-  text-decoration: none;
+
+.btn {
+  margin: 5px;
 }
-footer > p {
-  text-align: center;
-  padding: 5px;
-  color: #a1c298;
+
+.btn:hover {
+  background-color: #004691;
 }
