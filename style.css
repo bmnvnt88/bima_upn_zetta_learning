@@ -92,8 +92,9 @@ p {
 }
 
 .judul {
+  color: white;
   padding: 2rem;
-  background-color: blanchedalmond;
+  background-color: rgb(151, 139, 122);
   border-radius: 15px;
 }
 
@@ -130,5 +131,22 @@ footer {
 }
 
 .btn:hover {
-  background-color: #004691;
+  color: chartreuse !important;
+  background-color: #628ab4;
+}
+
+/* center {
+  width: auto;
+  height: auto;
+  border-radius: 1em;
+  margin: 0px;
+  position: sticky;
+} */
+
+.sticky {
+  position: sticky;
+  top: 0;
+  padding: 0px;
+  width: auto;
+  height: auto;
 }
