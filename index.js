@@ -1,14 +1,14 @@
 /**
- * @param {Book} book
+ * @param {Helm} helm
  * @param {Number} discount
  * @param {Number} tax
  */
 
- function discount(book, discount, tax){
+ function discount(helm, discount, tax){
     let result = 0;
-    if(book && book.price){
-        const title = book.title;
-        const price = book.price;
+    if(helm && helm.price){
+        const title = helm.title;
+        const price = helm.price;
         const totalDiscount = price * (discount/100);
         const priceAfterDiscount = price - totalDiscount;
         const totalTax = priceAfterDiscount * (tax/100);
