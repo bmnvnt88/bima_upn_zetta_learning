@@ -1,33 +1,33 @@
-/**
- * @param {Book} book
- * @param {Number} discount
- * @param {Number} tax
- */
+ function transaksi(buku, diskon, pajak, stok, pesanan){
+     let result = 0;
+     for (let loopIndex = 0; loopIndex <= pesanan; loopIndex++) {
+         if (buku && buku.harga && (loopIndex < stok)) {
+             const judul = buku.judul;
+             const harga = buku.harga;
+             const totaldiskon = harga * (diskon / 100);
+             const hargapotongdiskon = harga - totaldiskon;
+             const totalpajak = hargapotongdiskon * (pajak / 100);
+             const hargatambahpajak = hargapotongdiskon + totalpajak;
+             result += hargatambahpajak;
 
- function discount(book, discount, tax){
-    let result = 0;
-    if(book && book.price){
-        const title = book.title;
-        const price = book.price;
-        const totalDiscount = price * (discount/100);
-        const priceAfterDiscount = price - totalDiscount;
-        const totalTax = priceAfterDiscount * (tax/100);
-        const priceAfterTax = priceAfterDiscount + totalTax;
-        result += priceAfterTax;
-
-        console.group();
-        console.log(title)
-        console.log('Original Price', price);
-        console.log('Discount Amount', totalDiscount);
-        console.log('Price After Discount', priceAfterDiscount);
-        console.log('Tax Amount', totalTax);
-        console.log('Price After Tax', priceAfterTax)
-        console.log()
-        console.groupEnd();
-    }
+             console.group();
+             console.log('Judul Buku = ',judul,'*',loopIndex+1)
+             console.log('Harga', harga);
+             console.log('Diskon', totaldiskon);
+             console.log('Harga dipotong diskon', hargapotongdiskon);
+             console.log('Pajak', totalpajak);
+             console.log('Harga ditambah pajak', hargatambahpajak)
+             console.log()
+             console.groupEnd();
+         } else {
+             console.log('Stok buku',buku.judul,'habis','kurang',pesanan-stok);
+             console.log();
+             break;
+         }
+     }
 
 }
 
-discount({title: "Helm KYT", price:5000000, publicity: true}, 30, 3);
-discount({title: "Helm NHK", price:1000000, publicity: false}, 40, 2);
-discount({title: "Helm Sukro", price:1500000, publicity: true}, 45, 3);
+transaksi({judul: "One Piece", harga:5000000, publicity: true}, 30, 3, 3, 4);
+transaksi({judul: "Naruto", harga:1000000, publicity: false}, 40, 2, 3, 3);
+transaksi({judul: "Bleach", harga:1500000, publicity: true}, 45, 3, 3, 1);
