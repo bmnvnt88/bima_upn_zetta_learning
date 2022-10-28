@@ -28,6 +28,6 @@
 
 }
 
-discount({title: "One Piece", price:5000000, publicity: true}, 30, 3);
-discount({title: "Naruto", price:1000000, publicity: false}, 40, 2);
-discount({title: "Bleach", price:1500000, publicity: true}, 45, 3);
+discount({title: "One Piece", price:5000000}, 30, 3);
+discount({title: "Naruto", price:1000000}, 40, 2);
+discount({title: "Bleach", price:1500000}, 45, 3);
