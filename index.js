@@ -1,14 +1,14 @@
 /**
- * @param {Helm} helm
+ * @param {Book} book
  * @param {Number} discount
  * @param {Number} tax
  */
 
- function discount(helm, discount, tax){
+ function discount(book, discount, tax){
     let result = 0;
-    if(helm && helm.price){
-        const title = helm.title;
-        const price = helm.price;
+    if(book && book.price){
+        const title = book.title;
+        const price = book.price;
         const totalDiscount = price * (discount/100);
         const priceAfterDiscount = price - totalDiscount;
         const totalTax = priceAfterDiscount * (tax/100);
@@ -28,6 +28,6 @@
 
 }
 
-discount({title: "Helm KYT", price:5000000, publicity: true}, 30, 3);
-discount({title: "Helm NHK", price:1000000, publicity: false}, 40, 2);
-discount({title: "Helm Sukro", price:1500000, publicity: true}, 45, 3);
+discount({title: "One Piece", price:5000000, publicity: true}, 30, 3);
+discount({title: "Naruto", price:1000000, publicity: false}, 40, 2);
+discount({title: "Bleach", price:1500000, publicity: true}, 45, 3);
